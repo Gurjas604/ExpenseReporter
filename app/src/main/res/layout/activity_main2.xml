@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-50dp"
+        android:text="Clear Data" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width= "wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_alignTop="@+id/editText3"
+        android:layout_marginTop="-50dp"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:hint="Name of Product" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button2"
+        android:layout_marginTop="-80dp"
+        android:ems="10"
+        android:hint="Money Spent"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPersonName" />
+
+    <!--<EditText-->
+        <!--android:id="@+id/editText4"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/editText3"-->
+        <!--android:layout_marginBottom="-50dp"-->
+        <!--android:ems="10"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:inputType="textPersonName"-->
+        <!--android:hint="Date" />-->
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>
