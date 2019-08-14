@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  border: 16px;
+  border-color: black;
+}
+
+li a:hover {
+  background-color: grey;
+}
+
+@font-face {
+   font-family: myFirstFont;
+   src: url(Fonts/sf-pro-text_regular.woff2);
+}
+
+* {
+   font-family: myFirstFont;
+}
+
+</style>
+
+</head>
+<body>
+
+<h3>For some reason graph dont show up</h3>
+<button onclick="drawChart()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Week', 'Expenses'],
+          ['Monday', 120],
+          ['Tue', 200],
+          ['Wed', 12],
+          ['Fir', 24]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Expense Report',
+            subtitle: 'Weekly Report',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+<div id="columnchart_material" style="width: 370px; height: 250px;"></div>
+
+
+
+</body>
+</html> 
